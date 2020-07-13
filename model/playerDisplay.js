@@ -30,7 +30,14 @@ const playerDisplaySchema = mongoose.Schema({
             type: Number,
             required: true
         },
-    }]
+    }],
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
+    }
 });
 
 const playerDisplay = module.exports = mongoose.model('playerDisplay', playerDisplaySchema);

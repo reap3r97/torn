@@ -40,6 +40,13 @@ const playerPerksSchema = mongoose.Schema({
     book_perks: {
         type: Number,
         required: true
+    },
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
     }
 });
 

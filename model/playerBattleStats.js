@@ -57,6 +57,13 @@ const playerBattleStatsSchema = mongoose.Schema({
         type: String,
         required: true
     }],
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
+    }
 });
 
 const playerBattleStats = module.exports = mongoose.model('playerBattleStats', playerBattleStatsSchema);

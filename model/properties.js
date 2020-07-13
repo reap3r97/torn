@@ -24,7 +24,14 @@ const propertiesSchema = mongoose.Schema({
     staff_available: [{
         type: Number,
         required: true
-    }]
+    }],
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
+    }
 });
 
 const properties = module.exports = mongoose.model('properties', propertiesSchema);

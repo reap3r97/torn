@@ -28,6 +28,13 @@ const factionSchema = mongoose.Schema({
     best_chain: {
         type: Number,
         required: true
+    },
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
     }
 });
 

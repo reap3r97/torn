@@ -368,6 +368,20 @@ const overallStatsSchema = mongoose.Schema({
     total_statenhancers_used: {
         type: Number,
         required: true
+    },
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
+    },
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
     }
 });
 

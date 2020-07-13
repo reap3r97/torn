@@ -49,7 +49,7 @@ const playerSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    player_id: {
+    playerId: {
         type: Number,
         required: true
     },
@@ -124,7 +124,7 @@ const playerSchema = mongoose.Schema({
         },
     },
     faction: {
-        position: {
+        factionPosition: {
             type: String,
             required: true
         },
@@ -179,6 +179,13 @@ const playerSchema = mongoose.Schema({
             required: true
         },
     },
+    createdAt:{
+        type: Date,
+        default: Date.now
+    },
+    updatedAt:{
+        type: Date
+    }
 });
 
 const Player = module.exports = mongoose.model('Player', playerSchema);
